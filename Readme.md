@@ -1,8 +1,8 @@
 Physarum
 ====
 
-![gif](https://i.imgur.com/dOUcMkk.gifv)
-![gif](https://i.imgur.com/ldtb114.gifv)
+![gif](https://i.imgur.com/Z4pQ0Hv.gif)
+![gif](https://i.imgur.com/Wwvn0TZ.gif)
 
 
 This project implements the algorithm presented in the paper "Characteristics of Pattern Formation and Evolution in Approximations of Physarum Transport Networks" by Jeff Jones. 
