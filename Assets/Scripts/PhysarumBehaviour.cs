@@ -1,5 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering;
 
 public class PhysarumBehaviour : MonoBehaviour
 {
@@ -84,8 +85,10 @@ public class PhysarumBehaviour : MonoBehaviour
 
     void InitializeTrail()
     {
-        trail = new RenderTexture(dimension, dimension, 24);
+        trail = new RenderTexture(dimension, dimension, 24, GraphicsFormat.R16G16B16A16_SFloat);
         trail.enableRandomWrite = true;
+        trail.wrapMode = TextureWrapMode.Clamp;
+        trail.filterMode = FilterMode.Point;
         trail.Create();
 
         var rend = GetComponent<Renderer>();
