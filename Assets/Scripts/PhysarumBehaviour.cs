@@ -28,7 +28,7 @@ public class PhysarumBehaviour : MonoBehaviour
     private int initHandle, particleHandle, trailHandle;
     private ComputeBuffer particleBuffer;
 
-    private static int GroupCount = 8;       // Group size has to be same with the compute shader group size
+    private static int GroupCount = 16;       // Group size has to be same with the compute shader group size
 
     struct Particle
     {

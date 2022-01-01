@@ -44,3 +44,5 @@ ExportedObj/
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
+.idea
+UserSettings

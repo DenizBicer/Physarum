@@ -60,7 +60,7 @@ RWTexture2D<float4> TrailBuffer;
 RWTexture2D<float4> Stimuli;
 
 
-[numthreads(8,1,1)]
+[numthreads(16,1,1)]
 void Init(uint3 id: SV_DISPATCHTHREADID)
 {
 	float x = wang_float(wang_hash(id.x));
@@ -73,7 +73,7 @@ void Init(uint3 id: SV_DISPATCHTHREADID)
 	particleBuffer[id.x].angle = angle; 	
 }
 
-[numthreads(8,1,1)]
+[numthreads(16,1,1)]
 void MoveParticles (uint3 id: SV_DISPATCHTHREADID)
 {
 	float angle = particleBuffer[id.x].angle;
@@ -124,7 +124,7 @@ void MoveParticles (uint3 id: SV_DISPATCHTHREADID)
 	particleBuffer[id.x].angle = angle;
 }
 
-[numthreads(8,8,1)]
+[numthreads(16,16,1)]
 void StepTrail (uint3 id : SV_DISPATCHTHREADID)
 {
 	float value;
